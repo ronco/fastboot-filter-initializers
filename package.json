@@ -1,0 +1,28 @@
+{
+  "name": "fastboot-filter-initializers",
+  "version": "0.0.1",
+  "description": "Simple broccoli utility function to filter ember initializers based upon build mode.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronco/fastboot-filter-initializers.git"
+  },
+  "keywords": [
+    "broccoli",
+    "ember",
+    "ember-cli",
+    "fastboot"
+  ],
+  "author": "Ron White <ronco@costite.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronco/fastboot-filter-initializers/issues"
+  },
+  "homepage": "https://github.com/ronco/fastboot-filter-initializers#readme",
+  "dependencies": {
+    "broccoli-funnel": "^1.0.1"
+  }
+}
