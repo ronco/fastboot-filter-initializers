@@ -1,7 +1,7 @@
 /* jshint node: true */
 'use strict';
 
-var Funnel     = require('broccoli-funnel');
+var Funnel = require('broccoli-funnel');
 var path   = require('path');
 
 function modeToExclude() {
@@ -12,13 +12,17 @@ function modeToExclude() {
   }
 }
 
-module.exports = function(tree) {
+module.exports = function(tree, appPath) {
+  var prefixPath = '';
+  if (appPath) {
+    prefixPath = appPath + '/';
+  }
   var mode = modeToExclude();
   return new Funnel(tree, {
     annotation: 'Funnel: Remove ' + mode + '-only initializers',
     exclude: [
-      'initializers/' + mode + '/**/*',
-      'instance-initializers/' + mode + '/**/*'
+      prefixPath + 'initializers/' + mode + '/**/*',
+      prefixPath + 'instance-initializers/' + mode + '/**/*'
     ]
   });
 };
