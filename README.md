@@ -1,7 +1,11 @@
 # fastboot-filter-initializers
 Simple broccoli utility function to filter ember initializers based upon build mode.
 
-To use this, add this to `index.js` of your addon like so:
+To use this, first add it as a dependency: 
+```
+npm i --save fastboot-filter-initializers
+```
+Then, add this to `index.js` of your addon like so:
 ```
 /* jshint node: true */
 'use strict';
@@ -16,4 +20,4 @@ module.exports = {
   }
 };
 ```
-And move your initializers and instance-initializers into a subdirectory depending on build mode they are used for, such as: `initializers/foo.js` -> `initializers/browser/foo.js`
+And move your initializers and instance-initializers into a subdirectory depending on build mode they are used for, such as: `initializers/foo.js` -> `initializers/browser/foo.js` and fastboot only initializers will be moved to `initializers/fastboot/foo.js`
