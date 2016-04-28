@@ -1,6 +1,6 @@
 {
   "name": "fastboot-filter-initializers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple broccoli utility function to filter ember initializers based upon build mode.",
   "main": "index.js",
   "scripts": {
